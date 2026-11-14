@@ -30,6 +30,10 @@ def afficher_taches():
 def rechercher_tache():
     mot_cle = input("Mot-clé à rechercher : ").strip().lower()
 
+    if mot_cle == "":
+        print("Erreur : veuillez saisir un mot-clé.")
+        return
+
     trouve = False
 
     for tache in taches:
